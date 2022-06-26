@@ -1,0 +1,18 @@
+﻿@using TravelTripProject.Models.Classlar
+@model List<Blog>
+<div class="padding">
+    <h4>En Popüler 10 Yer</h4>
+
+    <ul class="list list-pad">
+        @*Kullanılan "i" nin amacı anasayfada bulunan top 10 listesindeki sayıların birer birer
+            artması amacı ile kullanılmıştır.*@
+        @{ int i = 0;}
+        @foreach (var x in Model)
+        {
+            <li class="list-bg"><span>@{ i++;}@i</span><a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a></li>
+        }
+
+    </ul>
+
+    <a href="/Blog/Index/" class="link1">Tüm blokları gör</a>
+</div>

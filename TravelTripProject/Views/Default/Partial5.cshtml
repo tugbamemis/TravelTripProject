@@ -1,0 +1,18 @@
+﻿@using TravelTripProject.Models.Classlar
+@model List<Blog>
+<div class="box1-left">
+    @foreach (var x in Model)
+    {
+        <a href="/Blog/BlogDetay/@x.ID">
+            <div class="bot-img">
+
+                <img src="@x.BlogImage" style="width:120px; height:65px;" alt="" />
+
+            </div>
+            <div class="bot-desc1">
+                <p>@x.Aciklama.Substring(0, 70) ...</p>
+            </div>
+        </a>
+        <div class="clear"></div>
+    }
+</div>
